@@ -44,7 +44,8 @@
     "scripts": [
       "./app/**/*",
       "./plugins/*",
-      "./package/**/*"
+      "./package/**/*",
+      "./node_modules/only/**/*"
     ],
     "assets": [
       "./theme/**/*"
