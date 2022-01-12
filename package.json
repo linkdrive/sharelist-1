@@ -18,7 +18,8 @@
     "release": "node scripts/release.js",
     "ci": "cd packages/sharelist && yarn release",
     "changelog": "node scripts/changelog.js",
-    "pkg": "cd packages/sharelist && yarn pkg-demo"
+    "pkg": "cd packages/sharelist && yarn pkg-demo",
+    "pkg-win7": "cd packages/sharelist && yarn pkg-win7"
   },
   "devDependencies": {
     "chalk": "^4.1.2",
