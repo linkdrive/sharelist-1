@@ -36,7 +36,7 @@ jobs:
           cp -r ./packages/sharelist-plugin/lib/* ./packages/sharelist/plugins
           npx babel ./packages/sharelist --out-dir ./packages/sharelist-legacy
           yarn build-server
-          \cp ./packages/sharelist-legacy ./packages/sharelist
+          \cp -r ./packages/sharelist-legacy ./packages/sharelist
           yarn build-win7
       - name: Release
         run: |
