@@ -33,11 +33,11 @@ jobs:
           mkdir -p ./packages/sharelist/theme/default
           mkdir -p ./packages/sharelist/plugins
           cp -r ./packages/sharelist-plugin/lib/* ./packages/sharelist/plugins
-          npx babel ./packages/sharelist --out-dir ./packages/sharelist-legacy
+          npx babel ./packages/sharelist --out-dir ./packages/sharelist-legacy --plugins=@babel/plugin-proposal-optional-chaining
           cp -r ./packages/sharelist-web/dist/* ./packages/sharelist/theme/default
           yarn build-server
           \cp -r ./packages/sharelist-legacy ./packages/sharelist
-          cat ./packages/sharelist/app/core/loader.js
+          cat ./packages/sharelist/app/controller/shared.js
           yarn build-win7
       - name: Release
         run: |
