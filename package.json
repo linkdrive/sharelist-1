@@ -19,7 +19,7 @@
     "ci": "cd packages/sharelist && yarn release",
     "changelog": "node scripts/changelog.js",
     "pkg": "cd packages/sharelist && yarn pkg-demo",
-    "build-win7": "cd packages/sharelist-web && yarn pkg-win7"
+    "build-win7": "cd packages/sharelist && yarn pkg-win7"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
