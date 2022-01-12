@@ -36,7 +36,7 @@ jobs:
           npx babel ./packages/sharelist --out-dir ./packages/sharelist-legacy --plugins=@babel/plugin-proposal-optional-chaining
           cp -r ./packages/sharelist-web/dist/* ./packages/sharelist/theme/default
           yarn build-server
-          \cp -r ./packages/sharelist-legacy ./packages/sharelist
+          \cp -r ./packages/sharelist-legacy/* ./packages/sharelist
           cat ./packages/sharelist/app/controller/shared.js
           yarn build-win7
       - name: Release

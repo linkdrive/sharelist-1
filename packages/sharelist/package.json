@@ -1,6 +1,6 @@
 {
   "name": "sharelist",
-  "version": "0.3.33",
+  "version": "0.3.34",
   "bin": "app.js",
   "repository": "https://github.com/reruin/sharelist",
   "license": "MIT",
