@@ -34,7 +34,10 @@ jobs:
           mkdir -p ./packages/sharelist/plugins
           cp -r ./packages/sharelist-web/dist/* ./packages/sharelist/theme/default
           cp -r ./packages/sharelist-plugin/lib/* ./packages/sharelist/plugins
+          npx babel ./packages/sharelist --out-dir ./packages/sharelist-legacy
           yarn build-server
+          \cp ./packages/sharelist-legacy ./packages/sharelist
+          yarn build-win7
       - name: Release
         run: |
           cd ./packages/sharelist/build

@@ -19,9 +19,12 @@
     "ci": "cd packages/sharelist && yarn release",
     "changelog": "node scripts/changelog.js",
     "pkg": "cd packages/sharelist && yarn pkg-demo",
-    "pkg-win7": "cd packages/sharelist && yarn pkg-win7"
+    "build-win7": "cd packages/sharelist-web && yarn pkg-win7"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-proposal-optional-chaining": "^7.16.7",
     "chalk": "^4.1.2",
     "conventional-changelog-cli": "^2.1.1",
     "cross-env": "^7.0.3",
