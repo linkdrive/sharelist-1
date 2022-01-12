@@ -1,6 +1,6 @@
 {
   "name": "sharelist",
-  "version": "0.3.35",
+  "version": "0.3.36",
   "bin": "app.js",
   "repository": "https://github.com/reruin/sharelist",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
     "pkg": "pkg . --output build/sharelist --targets node16-linux-x64,node16-linux-arm64,node16-linuxstatic-armv7,node16-macos-x64,node16-win-x64 --public-packages '*'",
-    "pkg-win7": "pkg . --output build/sharelist-node12-win-x64.exe --targets node12-win-x64 --public-packages '*'",
+    "pkg-win7": "pkg . --output build/sharelist-node12 --targets node12-win-x64,node12-win-x86 --public-packages '*'",
     "release": "node ../../scripts/release.js --skipBuild --skipNpmPublish"
   },
   "dependencies": {
