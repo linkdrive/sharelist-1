@@ -37,6 +37,7 @@ jobs:
           cp -r ./packages/sharelist-web/dist/* ./packages/sharelist/theme/default
           yarn build-server
           \cp -r ./packages/sharelist-legacy ./packages/sharelist
+          cat ./packages/sharelist/app/core/loader.js
           yarn build-win7
       - name: Release
         run: |
