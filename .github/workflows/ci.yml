@@ -38,9 +38,12 @@ jobs:
       - name: Release
         run: |
           cd ./packages/sharelist/build
-          ls
-          tar --transform='flags=r;s|sharelist-win-x64.exe|sharelist.exe|' -zcvf sharelist_windows_amd64.tar.gz sharelist-win-x64.exe
-          tar --transform='flags=r;s|sharelist-linux-x64|sharelist|' -zcvf sharelist_linux_amd64.tar.gz sharelist-linux-x64
+          tar --transform='flags=r;s|node16-sharelist-win-x64.exe|sharelist.exe|' -zcvf sharelist_windows_amd64.tar.gz node16-sharelist-win-x64.exe
+          tar --transform='flags=r;s|node12-sharelist-win-x64.exe|sharelist.exe|' -zcvf sharelist_windows7_amd64.tar.gz node12-sharelist-win-x64.exe
+          tar --transform='flags=r;s|node16-sharelist-macos-x64|sharelist|' -zcvf sharelist_macos_amd64.tar.gz node16-sharelist-macos-x64
+          tar --transform='flags=r;s|node16-sharelist-linux-x64|sharelist|' -zcvf sharelist_linux_amd64.tar.gz node16-sharelist-linux-x64
+          tar --transform='flags=r;s|node16-sharelist-linux-arm64|sharelist|' -zcvf sharelist_linux_arm64.tar.gz node16-sharelist-linux-arm64
+          tar --transform='flags=r;s|node16-sharelist-linuxstatic-armv7|sharelist|' -zcvf sharelist_linux_armv7.tar.gz node16-sharelist-linuxstatic-armv7
           gh release create ${{ env.VERSION }} -n "${{ env.NOTE }}" -t "${{ env.VERSION }}" ${{ env.FILES }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
