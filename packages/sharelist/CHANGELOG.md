@@ -1,3 +1,7 @@
+## [0.3.31](https://github.com/reruin/sharelist/compare/v0.3.30...v0.3.31) (2022-01-12)
+
+
+
 ## [0.3.30](https://github.com/reruin/sharelist/compare/v0.3.27...v0.3.30) (2022-01-12)
 
 
