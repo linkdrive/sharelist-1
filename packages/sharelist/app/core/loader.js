@@ -2,8 +2,6 @@ const path = require('path')
 
 const fs = require('fs')
 
-const { stat, readdir } = require('fs/promises')
-
 const { isClass, isFunction } = require('./utils')
 
 const loadFile = (filepath) => {
@@ -57,7 +55,7 @@ const loadDir = async (dir) => {
   } else {
     let ret = {}
     if (fs.existsSync(dir)) {
-      let files = await readdir(dir)
+      let files = fs.readdirSync(dir)
       for (let i of files) {
         let filepath = path.join(dir, i)
         let file = fs.statSync(filepath)
